@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Eco3 - Suivi intelligent</title>
+    <link rel="stylesheet" href="eco3.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #312f2f; /* Dark background */
+            color: #222222; /* Light text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #bb86fc; /* Light purple for headings */
+            font-weight: bold;
+        }
+        nav {
+            background-color: #353232; /* Darker navigation bar */
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: #e0e0e0; /* Light text for links */
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #6200ea; /* Light purple hover effect */
+        }
+        section {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #3f3c3c; /* Dark section background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+        section:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        }
+        form label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+            color: #e0e0e0; /* Light label text */
+        }
+        form select, form input[type="number"], form input[type="datetime-local"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #555;
+            margin-bottom: 15px;
+            font-size: 16px;
+            background-color: #3d3838; /* Dark input field background */
+            color: #e0e0e0; /* Light text in input fields */
+        }
+        form input[type="submit"] {
+            background-color: #6200ea; /* Light purple button */
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        form input[type="submit"]:hover {
+            background-color: #3700b3; /* Darker purple on hover */
+        }
+        img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(34, 33, 33, 0.2);
+        }
+        area {
+            transition: background-color 0.3s ease;
+        }
+        area:hover {
+            background-color: rgba(119, 0, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ECO3 - Suivi intelligent des mesures sur l'usage de locaux</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#appli">L'application éco 3</a></li>
+            <li><a href="#carte">Carte interactive</a></li>
+            <li><a href="#capteurs">Les capteurs</a></li>
+            <li><a href="#mesures">Les mesures</a></li>
+            <li><a href="#actionneurs">Les actionneurs</a></li>
+            <li><a href="#dashboard">Tableau de bord</a></li>
+        </ul>
+    </nav>
+
+    <section id="appli">
+        <h2>Présentation de l'application éco 3</h2>
+        <p>Une solution de gestion intelligente pour le suivi de l'utilisation des locaux et de l'énergie.</p>
+    </section>
+
+    <section id="carte">
+        <h2>Carte Interactive des locaux</h2>
+        <img src="http://lival.fr/apprentissage/img/acy_1er_etage_700x721.png" alt="Plan du premier étage" usemap="#salles">
+        <map name="salles">
+            <area shape="rect" coords="300,200,350,250" href="eco3.html?salle=C213" alt="Salle C213">
+        </map>
+    </section>
+
+    <section id="capteurs">
+        <h2>Les Capteurs : Surveillance en temps réel</h2>
+        <p>Nos capteurs collectent des données essentielles pour optimiser l'utilisation des espaces.</p>
+    </section>
+
+    <section id="mesures">
+        <h2>Ajouter des mesures</h2>
+        <form method="GET" action="eco3.html">
+            <label for="capteur">Capteur :</label>
+            <select name="capteur" id="capteur">
+                <option value="1">TEMPERATURE</option>
+                <option value="2">PRESSION</option>
+                <option value="3">LUMINOSITE</option>
+                <option value="4">PARICULES(dust)</option>
+            </select>
+
+            <label for="zone">Zone :</label>
+            <select name="zone" id="zone">
+                <option value="1">C210</option>
+                <option value="2">C211</option>
+                <option value="3">C212</option>
+                <option value="4">C213</option>
+                <option value="5">C214</option>
+            </select>
+
+            <label for="valeur">Valeur :</label>
+            <input type="number" name="valeur" id="valeur" step="0.1">
+
+            <label for="instant">Date/Heure :</label>
+            <input type="datetime-local" name="instant" id="instant">
+
+            <input type="hidden" name="action" value="1">
+            <input type="submit" value="Ajouter la mesure">
+        </form>
+    </section>
+
+    <section id="actionneurs">
+        <h2>Contrôlez les Actionneurs</h2>
+        <p>Gérez l'activation des actionneurs en fonction des mesures et besoins des locaux.</p>
+    </section>
+
+    <section id="dashboard">
+        <h2>Tableau de Bord : Analyses & Rapports</h2>
+        <p>Consultez les rapports détaillés sur l'utilisation des locaux et les économies d'énergie réalisées.</p>
+    </section>
+</body>
+</html>

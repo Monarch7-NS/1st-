@@ -1,0 +1,212 @@
+/* Header (Title) */
+h1 {
+    text-align: center; /* Center-aligns the title text */
+    color: #2c3e50; /* Sets the color of the title text to a dark shade */
+    font-size: 3.5rem; /* Sets the font size of the title */
+    margin-top: 30px; /* Adds a margin at the top of the title */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Adds a soft shadow to the text */
+    animation: fadeIn 1.5s ease-out; /* Applies a fade-in animation with a duration of 1.5 seconds */
+    transition: color 0.6s ease, text-shadow 0.6s ease, transform 0.6s ease; /* Smooth transition for color, text-shadow, and transform properties */
+}
+
+h1:hover {
+    color: #9b4de0; /* Changes the color of the title to a soft purple when hovered */
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3); /* Increases the shadow size and intensity on hover */
+    transform: translateY(-8px) scale(1.05); /* Moves the title slightly up and scales it slightly larger */
+}
+
+/* Section Titles (h2) */
+section h2 {
+    font-size: 2.5rem; /* Sets the font size of the section titles */
+    color: #6a1b9a; /* Sets a deep purple color for the section title */
+    margin-bottom: 20px; /* Adds space below the section title */
+    font-weight: bold; /* Makes the section title bold */
+    position: relative; /* Sets relative positioning for the section title */
+    transition: color 0.5s ease, transform 0.5s ease, letter-spacing 0.3s ease; /* Smooth transition for color, transform, and letter-spacing */
+}
+
+section h2:hover {
+    color: #9b4de0; /* Changes the section title color on hover */
+    transform: translateX(5px); /* Moves the title to the right on hover */
+    letter-spacing: 2px; /* Expands the letter spacing for a more elegant look */
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none; /* Removes bullet points from the list */
+    padding: 0; /* Removes padding from the list */
+    background: linear-gradient(45deg, #6a1b9a, #9b4de0); /* Sets a diagonal gradient background from deep purple to soft purple */
+    text-align: center; /* Centers the list items */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Adds a soft shadow to the navigation menu */
+    position: sticky; /* Makes the navigation menu sticky at the top of the page */
+    top: 0; /* Fixes the position of the navigation at the top */
+    z-index: 1000; /* Ensures the navigation stays above other content */
+    animation: slideDown 1.5s ease-out; /* Applies a slide-down animation for the menu */
+}
+
+nav ul li {
+    display: inline-block; /* Makes the list items inline with each other */
+    margin: 15px; /* Adds margin between the list items */
+}
+
+nav ul li a {
+    color: #f5c4ff; /* Sets the link text color to a light purple */
+    text-decoration: none; /* Removes the underline from the link */
+    padding: 14px 24px; /* Adds padding around the link text */
+    font-size: 1.2rem; /* Sets the font size for the links */
+    font-weight: bold; /* Makes the link text bold */
+    border-radius: 10px; /* Rounds the corners of the link buttons */
+    position: relative; /* Positions the link relatively for pseudo-element manipulation */
+    overflow: hidden; /* Hides any content outside the bounds of the link */
+    transition: color 0.5s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+nav ul li a::before {
+    content: ''; /* Creates an empty pseudo-element before the link content */
+    position: absolute; /* Positions the pseudo-element absolutely */
+    top: 50%; /* Centers it vertically */
+    left: 50%; /* Centers it horizontally */
+    width: 100%; /* Initially makes the pseudo-element very large */
+    height: 100%; /* Initially makes the pseudo-element very large */
+    background-color: #ffffff59; /* Sets the background color of the pseudo-element to a vibrant purple */
+    transition: all 0.6s ease; /* Smooth transition for all properties */
+    border-radius: 50%; /* Rounds the pseudo-element into a circle */
+    z-index: 0; /* Sends the pseudo-element behind the link text */
+    transform: translate(-50%, -50%) scale(0); /* Initially hides the pseudo-element by scaling it down */
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Changes the link text color to white when hovered */
+    transform: translateY(-3px) scale(1.1); /* Moves the link slightly up and scales it slightly larger */
+}
+
+nav ul li a:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Expands the pseudo-element to its original size when hovered */
+}
+
+/* Section Styling */
+section {
+    padding: 40px; /* Adds padding inside the section */
+    margin: 40px 0; /* Adds vertical margins between sections */
+    border-radius: 15px; /* Rounds the corners of the section */
+    background: linear-gradient(135deg, #f7c2ff, #d4a9ff); /* Sets a soft gradient background */
+    border: 1px solid #e0a8f2; /* Adds a light purple border around the section */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds a soft shadow around the section */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease; /* Smooth transition for background, box-shadow, and transform */
+    animation: fadeInSection 1.5s ease-out; /* Applies a fade-in animation for the section */
+}
+
+section:hover {
+    background: linear-gradient(135deg, #f1b8ff, #da96ff); /* Changes the gradient to a warmer one on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Enhances the shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+section:hover h2 {
+    color: #9b4de0; /* Changes the section title color on hover */
+}
+
+/* Image Styling */
+img {
+    display: block; /* Makes the image block-level */
+    margin: 30px auto; /* Centers the image horizontally with margin around it */
+    border-radius: 12px; /* Rounds the corners of the image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Adds a soft shadow around the image */
+    transition: transform 0.6s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+img:hover {
+    transform: scale(1.1); /* Scales the image slightly larger on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
+}
+
+/* Form Styling */
+form {
+    max-width: 480px; /* Sets a maximum width for the form */
+    margin: 40px auto; /* Centers the form with margin */
+    padding: 30px; /* Adds padding inside the form */
+    border-radius: 18px; /* Rounds the corners of the form */
+    background: #424242; /* Sets the background color of the form */
+    border: 1px solid #d495ff; /* Adds a light purple border */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); /* Adds a shadow around the form */
+    animation: fadeInForm 1.5s ease-out; /* Applies a fade-in animation to the form */
+    transition: transform 0.4s ease; /* Smooth transition for transform */
+}
+
+form:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+form label {
+    font-size: 1.2rem; /* Sets the font size of the form label */
+    margin: 15px 0; /* Adds margin around the label */
+    color: #6a1b9a; /* Sets the color of the label to deep purple */
+    transition: color 0.4s ease; /* Smooth color transition for the label */
+}
+
+form input, form select {
+    width: 100%; /* Sets the input/select fields to full width */
+    padding: 14px; /* Adds padding inside the fields */
+    margin: 10px 0; /* Adds margin between input fields */
+    border: 1px solid #d495ff; /* Adds a light purple border */
+    border-radius: 10px; /* Rounds the corners of the input fields */
+    font-size: 1rem; /* Sets the font size for the input fields */
+    background-color: #f7f7f7; /* Sets the background color of the input fields */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition for border and background color */
+}
+
+form button {
+    width: 100%; /* Sets the button to full width */
+    padding: 14px; /* Adds padding inside the button */
+    background-color: #6a1b9a; /* Sets the background color of the button */
+    color: white; /* Sets the text color of the button to white */
+    font-size: 1.4rem; /* Sets the font size for the button */
+    font-weight: bold; /* Makes the button text bold */
+    border: none; /* Removes the border of the button */
+    border-radius: 12px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
+}
+
+form button:hover {
+    background-color: #9b4de0; /* Changes the background color of the button on hover */
+    transform: scale(1.1); /* Scales the button slightly larger on hover */
+}
+
+form button:active {
+    background-color: #7116c5; /* Changes the background color of the button when clicked */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Starts the animation with zero opacity */
+        transform: translateY(-30px); /* Starts with the element off-screen */
+    }
+    100% {
+        opacity: 1; /* Ends the animation with full opacity */
+        transform: translateY(0); /* Ends with the element in its final position */
+    }
+}
+
+@keyframes fadeInSection {
+    0% {
+        opacity: 0; /* Starts the animation with zero opacity */
+        transform: translateY(30px); /* Starts with the section below the viewport */
+    }
+    100% {
+        opacity: 1; /* Ends the animation with full opacity */
+        transform: translateY(0); /* Ends with the section in its final position */
+    }
+}
+
+@keyframes fadeInForm {
+    0% {
+        opacity: 0; /* Starts the animation with zero opacity */
+        transform: scale(0.8); /* Starts with the form scaled down */
+    }
+    100% {
+        opacity: 1; /* Ends the animation with full opacity */
+        transform: scale(1); /* Ends with the form at normal size */
+    }
+}
